@@ -20,6 +20,6 @@ private fun getAPIPrefix(chain: ChainId) = getPrefix(chain)?.let {
     if (it.isNotEmpty()) "-$it" else it
 }
 
-fun getEtherScanAPIBaseURL(chain: ChainId) = "https://api" + getAPIPrefix(chain) + ".wanli.uno"
+fun getEtherScanAPIBaseURL(chain: ChainId) = "https://explorer.wanli.uno/api"
 
 fun getEtherScanBlockExplorer(chain: ChainId) = getPrefix(chain)?.let { EtherScanBlockExplorer(it) }
